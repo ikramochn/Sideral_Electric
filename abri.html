@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Abris | SIDERAL ELECTRIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================================
+   1. الأساسيات وتنسيق الجسم (Body)
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 75px; /* مساحة لضمان عدم اختفاء المحتوى تحت النافبار */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
+}
+
+/* =========================================
+   2. تنسيق شريط التنقل (Navbar) 
+   ========================================= */
+/* --- Navbar Fix --- */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+             background: rgba(16, 37, 69, 0.7); /* Fond --black avec transparence */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a { display: flex; align-items: center; text-decoration: none; gap: 12px; }
+        .logo img { height: 55px; border-radius: 5px; }
+        .logo-text { display: flex; flex-direction: column; }
+        .brand-name { color: #FFC300; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.4rem; line-height: 1.2; }
+        .slogan { color: #FFC300; font-size: 0.7rem; letter-spacing: 1px; }
+
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { color: #001D3D; text-decoration: none;   font-family: 'Oswald', sans-serif; font-weight: 500; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #FFC300; }
+
+
+
+
+/* =========================================
+   3. المسار البسيط (Breadcrumb)
+   ========================================= */
+ .breadcrumb { padding: 20px 5%; background: #fff; font-size: 14px; color: #666; border-bottom: 1px solid #eee; }
+        .breadcrumb a { color: #003566; text-decoration: none; font-weight: bold; }
+        
+/* =========================================
+   4. هيكل الكروت (Grid & Cards)
+   ========================================= */
+.section-title {
+    text-align: center;
+    color: #001D3D;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding-top: 70px;
+}
+
+.abris-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.abri-card {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-top: 6px solid #001D3D;
+    transition: transform 0.3s ease;
+}
+
+.abri-card:hover {
+    transform: translateY(-5px);
+}
+
+.abri-header {
+    background: #fcfcfc;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+/* تنسيق الصورة المضافة */
+.abri-image-container {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.abri-img-main {
+    max-width: 100%;
+    height: 180px; /* يمكنك تعديل الارتفاع حسب رغبتك */
+    object-fit: contain; /* لضمان عدم تمدد الصورة بشكل خاطئ */
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   5. الجداول التقنية والأزرار
+   ========================================= */
+.mini-specs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.mini-specs td {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.mini-specs td:first-child {
+    font-weight: bold;
+    color: #003566;
+    width: 50%;
+}
+
+.btn-details {
+    display: block;
+    text-align: center;
+    background: #001D3D;
+    color: #ffffff !important;
+    padding: 14px;
+    text-decoration: none !important;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-details:hover {
+    background: #FFC300;
+    color: #001D3D !important;
+}
+
+/* حالة القسم الفارغ (Abri Bus) */
+.empty-card { border-top-color: #ccc; opacity: 0.7; }
+.empty-content {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    
+    <div class="logo-text">
+      <span class="brand-name">SIDERAL ELECTRIC</span>
+      <span class="brand-slogan">LES EXPERTS DU SOUDAGE</span>
+    </div>
+
+    <!-- زر الهامبرغر -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#home">ACCUEIL</a></li>
+      <li><a href="index.html#categories-slider">PRODUITS</a></li>
+      <li><a href="index.html#clients-gallery">REALISATIONS</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+<h1 class="section-title">Nos Solutions d'Abris</h1>
+
+<div class="abris-grid">
+    
+   <div class="abri-card">
+    <div class="abri-header">
+        <h2>Abri Fumeur</h2>
+        <div class="abri-image-container">
+            <img src="af.png" alt="Abri Fumeur SIDERAL" class="abri-img-main">
+        </div>
+    </div>
+    <div class="abri-body">
+        <table class="mini-specs">
+            <tr><td>Longueur</td><td>2.50 m</td></tr>
+            <tr><td>Largeur</td><td>1.80 m</td></tr>
+            <tr><td>Hauteur</td><td>2.30 m</td></tr>
+            <tr><td>Structure</td><td>Acier robuste</td></tr>
+            <tr><td>Parois</td><td>Tôle CNC</td></tr>
+        </table>
+        <p style="font-size: 0.8rem; color: #666; margin-bottom: 20px;">Structure sur pieds platine avec toiture plane.</p>
+        <a href="index.html#contact" class="btn-details">Demander Devis</a>
+    </div>
+</div>
+
+    <div class="abri-card empty-card">
+        <div class="abri-header">
+            <span class="tag-status" style="background: #eee; color: #999;">Bientôt disponible</span>
+            <h2>Abri Bus</h2>
+        </div>
+        <div class="abri-body">
+            <div class="empty-content">
+                <i class="fas fa-bus" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <p>Les informations techniques pour l'Abri Bus seront ajoutées prochainement.</p>
+            </div>
+            <button class="btn-details" style="background: #ccc; cursor: not-allowed;" disabled>En attente</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

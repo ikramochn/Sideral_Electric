@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bac de Rétention de Fûts | SIDERAL ELECTRIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    
+    <div class="logo-text">
+      <span class="brand-name">SIDERAL ELECTRIC</span>
+      <span class="brand-slogan">LES EXPERTS DU SOUDAGE</span>
+    </div>
+
+    <!-- زر الهامبرغر -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#home">ACCUEIL</a></li>
+      <li><a href="index.html#categories-slider">PRODUITS</a></li>
+      <li><a href="index.html#clients-gallery">REALISATIONS</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+
+  </div>
+</nav>
+<style>nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Légèrement plus grand pour le slogan */
+    background: rgba(16, 37, 69, 0.7); /* Fond --black avec transparence */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(20px); /* Effet moderne */
+    border-bottom: 1px solid rgba(255, 214, 10, 0.1);
+}
+
+.nav-inner {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Pousse le logo à gauche et les liens à droite */
+    align-items: center;
+}
+
+/* Style de texte conservé (sans image logo) */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--darkyellow); /* Jaune pour ressortir sur le bleu sombre */
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.brand-slogan {
+font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #eee;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* Menu de navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: var(--white); /* Changé en blanc pour la lisibilité sur le bleu */
+    margin-left: 25px;
+    text-decoration: none;
+    display: inline-block; /* Nécessaire pour l'animation de mouvement */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition fluide */
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--darkyellow);
+    transform: translateY(-3px); /* Le mot monte légèrement */
+}
+
+.simple-breadcrumb {
+    padding: 15px 5%; /* مسافة بسيطة من الجوانب */
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #888;
+}
+
+.simple-breadcrumb a {
+    text-decoration: none;
+    color: #003566; /* لون أزرق بسيط */
+    margin: 0 5px;
+}
+
+.simple-breadcrumb a:hover {
+    text-decoration: underline; /* يظهر خط تحت الكلمة عند التمرير فقط */
+}
+
+.simple-breadcrumb span {
+    margin-left: 5px;
+    color: #333; /* لون النص الحالي */
+    font-weight: bold;
+}
+</style>
+
+
+<div class="simple-breadcrumb">
+    <a href="index.html">Accueil</a> / 
+    <a href="BR.html">Bac de rétention</a> / 
+    <span>Modèles pour fûts</span>
+</div>
+
+<section class="sub-category-page">
+    <h1 class="section-title">Modèles de Bacs pour Fûts</h1>
+    
+    <div class="grid-container">
+        <div class="spec-card">
+            <img src="2f.svg" alt="Bac 2 futs">
+            <h2>Bac 2 Fûts (BR-2F210L)</h2>
+            <table class="specs-list">
+                <tr><td>Dimensions (LxlxH)</td><td>125 x 80 x 30 cm</td></tr>
+                <tr><td>Capacité de Rétention</td><td>210 Litres</td></tr>
+                <tr><td>Charge Maximale</td><td>600 Kg</td></tr>
+                <tr><td>Poids à vide</td><td>65 Kg</td></tr>
+                <tr><td>Protection</td><td>Revêtement époxy</td></tr>
+            </table>
+            <a href="index.html#contact" class="btn-quote">Demander Devis</a>
+        </div>
+
+        <div class="spec-card">
+            <img src="4f.svg" alt="Bac 4 futs">
+            <h2>Bac 4 Fûts (BR-4F240L)</h2>
+            <table class="specs-list">
+                <tr><td>Dimensions (LxlxH)</td><td>125 x 125 x 33 cm</td></tr>
+                <tr><td>Capacité de Rétention</td><td>240 Litres</td></tr>
+                <tr><td>Charge Maximale</td><td>1000 Kg</td></tr>
+                <tr><td>Poids à vide</td><td>110 Kg</td></tr>
+                <tr><td>Protection</td><td>Revêtement époxy</td></tr>
+            </table>
+            <a href="index.html#contact" class="btn-quote">Demander Devis</a>
+        </div>
+        <div class="spec-card">
+    <img src="2f200l.png" alt="Bac 2 futs plus">
+    <h2>Bac 2 Fûts + (BR-2F200L +)</h2>
+    <table class="specs-list">
+        <tr><td>Dimensions (LxlxH)</td><td>121 x 96 x 28 cm</td></tr>
+        <tr><td>Capacité de Rétention</td><td>200 Litres</td></tr>
+        <tr><td>Charge Maximale</td><td>500 Kg</td></tr>
+        <tr><td>Poids à vide</td><td>75 Kg</td></tr>
+        <tr><td>Usage Spécial</td><td>Fûts + Petits réservoirs</td></tr>
+        <tr><td>Protection</td><td>Revêtement époxy</td></tr>
+    </table>
+    <a href="index.html#contact" class="btn-quote">Demander Devis</a>
+</div>
+    </div>
+</section>
+
+</body>
+</html>
+
+ <style>
+      
+
+        /* --- Page Layout --- */
+        body { padding-top: 80px; font-family: 'Roboto', sans-serif; margin: 0; background: #f4f4f4; }
+        
+      
+        
+        .sub-category-page { padding: 0px 5%; }
+        .section-title { color: #001D3D; font-size: 2.2rem; margin-bottom: 40px; text-align: center; font-family: 'Oswald', sans-serif; }
+
+   .grid-container { 
+    display: grid; 
+    /* صغرنا الـ 350px إلى 280px لكي تسمح للكارد بالتقلص أكثر */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; /* قللنا الفراغ بين الكاردات */
+    max-width: 1000px; /* قللنا العرض الأقصى للحاوية لكي لا تبتعد الكاردات عن بعضها */
+    margin: 0 auto; 
+}
+
+.spec-card { 
+    background: #fff; 
+    border-radius: 12px; 
+    padding: 15px; /* قللنا المسافة الداخلية من 25 إلى 15 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #001D3D;
+    transition: 0.3s;
+}
+
+.spec-card h2 { 
+    color: #001D3D; 
+    font-size: 1.1rem; /* صغرنا حجم العنوان من 1.4 إلى 1.1 */
+    margin-bottom: 12px; 
+    padding-bottom: 8px; 
+}
+
+.spec-card img { 
+    width: 100%; 
+    height: 150px; /* قللنا ارتفاع الصورة من 200 إلى 150 */
+    object-fit: contain; 
+    margin-bottom: 10px; 
+}
+
+.specs-list td { 
+    padding: 8px 0; /* قللنا المسافة بين أسطر الجدول من 12 إلى 8 */
+    font-size: 0.85rem; /* صغرنا حجم الخط من 0.95 إلى 0.85 */
+}
+
+        .btn-quote { 
+            display: block; 
+            text-align: center; 
+            background: #001D3D; 
+            color: #fff; 
+            padding: 10px 20px;
+            margin-top: 15px;
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-quote:hover { background: #FFC300; color: #001D3D; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* يفضل إضافة جافاسكريبت للهامبرغر لاحقاً */
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>

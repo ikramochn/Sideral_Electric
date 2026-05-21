@@ -1,0 +1,870 @@
+:root {
+
+    --lightyellow: #FFD60A;
+    --darkyellow: #FFC300;
+    --lightblue: #003566;
+    --darkblue: #001D3D;
+    --black: #000814;
+
+  /*   #000814
+       #001D3D 
+       #003566 
+       #FFC300 
+       #FFD60A*/
+}
+
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; color: var(--black); scroll-behavior: smooth; 
+ overflow-x: hidden;
+}
+
+
+
+
+
+/* -------- NAVIGATION BLUR MODERNE AVEC STYLE TEXTE -------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Légèrement plus grand pour le slogan */
+    background: rgba(16, 37, 69, 0.7); /* Fond --black avec transparence */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(20px); /* Effet moderne */
+    border-bottom: 1px solid rgba(255, 214, 10, 0.1);
+}
+
+.nav-inner {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Pousse le logo à gauche et les liens à droite */
+    align-items: center;
+}
+
+/* Style de texte conservé (sans image logo) */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--darkyellow); /* Jaune pour ressortir sur le bleu sombre */
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.brand-slogan {
+font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #eee;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* Menu de navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: var(--white); /* Changé en blanc pour la lisibilité sur le bleu */
+    margin-left: 25px;
+    text-decoration: none;
+    display: inline-block; /* Nécessaire pour l'animation de mouvement */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition fluide */
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: var(--darkyellow);
+    transform: translateY(-3px); /* Le mot monte légèrement */
+}
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    
+    font-family: "Libertinus Sans", serif;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #1a1a1a; /* Couleur de secours */
+}
+
+/* L'image de fond avec l'effet de flou */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('01.png'); /* Remplacez par votre image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.7); /* Le flou et l'assombrissement */
+    transform: scale(1.1); /* Empêche les bords blancs dus au flou */
+    z-index: 1;
+}
+
+.hero-content {
+   
+    position: relative;
+    z-index: 2; /* Place le texte au-dessus du flou */
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+.hero h1 {
+    font-family: "Libertinus Sans", serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+
+.work-btn {
+  font-family: "Libertinus Sans", serif;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 23px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid var(--darkblue);
+  border-radius: 10px;
+  color: var(--darkyellow);
+  background: var(--darkblue);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  isolation: isolate;
+  text-decoration: none;
+}
+
+.work-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--darkyellow);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+   color: var(--darkblue);
+}
+
+.work-btn:hover::before {
+  transform: translateX(0); 
+}
+
+.work-btn:hover {
+  background-color: var(--darkblue);
+  color: var(--darkblue);
+  border: 2px solid var(--darkblue);
+  border-radius: 10px;
+
+}
+
+
+/****************  SECTION 01   *******************/
+/****************  categories 01   *******************/
+
+
+.categories-section {
+    padding: 60px 0;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+h2.section-title {
+   font-family: "Libertinus Sans", serif;
+    font-size: 1.5rem;       /* حجم مناسب وكبير للعنوان */
+    color: var(--darkblue);
+    text-align: center;
+    margin-bottom: 50px;     /* مساحة كافية تحت العنوان */
+    margin-top: 10px;        /* مساحة فوق العنوان */
+     /* لجعل الحروف كبيرة واحترافية */
+    width: 100%;             /* لضمان التمركز في وسط الصفحة */
+    display: block;
+}
+
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.categories-wrapper {
+    display: flex;
+    overflow-x: auto; /* يسمح بالتمرير */
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px 10px;
+    scrollbar-width: none; /* إخفاء شريط التمرير في فايرفوكس */
+}
+
+.categories-wrapper::-webkit-scrollbar {
+    display: none; /* إخفاء شريط التمرير في كروم */
+}
+
+.cat-item {
+    min-width: 200px; /* يضمن بقاء 4 أو 5 في السطر */
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icon-box {
+    width: 130px;
+    height: 130px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #eee;
+    transition: 0.3s;
+}
+
+.icon-box img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.cat-item h3 {
+    font-size: 0.95rem;
+    color: var(--darkblue);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* تأثيرات الأسهم */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--darkblue);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.slider-arrow:hover {
+    background: var(--darkyellow);
+    color: var(--darkblue);
+}
+
+.slider-arrow.left { left: 5px; }
+.slider-arrow.right { right: 5px; }
+
+/* تأثير الـ Hover على العنصر */
+.cat-item:hover .icon-box {
+    transform: scale(1.1);
+    border-color: var(--darkyellow);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************/
+
+
+
+.clients-gallery {
+  padding: 80px 0;
+  background: #fff;
+  font-family: "Libertinus Sans", serif;
+}
+
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-img {
+  min-width: 350px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--darkblue);
+  color: var(--lightyellow);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-arrow.left { left: 10px; }
+.gallery-arrow.right { right: 10px; }
+
+.references {
+  padding: 80px 5%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.logos-grid img {
+  width: 100px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+  margin: auto;
+}
+
+.logos-grid img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+
+.clients-gallery {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.gallery-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-img {
+  min-width: 350px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--darkblue);
+  color: var(--lightyellow);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery-arrow.left { left: 10px; }
+.gallery-arrow.right { right: 10px; }
+
+.references {
+  padding: 80px 5%;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.logos-grid img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logos-grid img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox-nav span {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+#prev { left: 30px; }
+#next { right: 30px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------ FOOTER SIDERAL OPTIMISÉ ------------------ */
+footer {
+    width: 100%;
+    background-color: var(--darkblue);
+    color: var(--white);
+    /* Utilisation de Roboto pour le texte de base et Oswald pour les titres */
+    font-family: 'Roboto', sans-serif; 
+    padding-top: 10px;
+}
+
+.f-item-con {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr; /* Proportions ajustées */
+    grid-gap: 4rem; /* Plus d'espace entre les grandes colonnes */
+    padding: 30px 2rem;
+}
+
+
+/* Style pour la première lettre en jaune */
+.app-initial {
+    color: var(--darkyellow); /* Ou utilisez directement #ffd60a */
+    font-weight: 950;
+    padding-bottom: 100px;
+}
+
+/* On s'assure que les titres utilisent bien Libertinus Sans */
+footer .app-name, 
+footer .footer-title {
+    font-family: "Libertinus Sans", serif;
+    color: #a0aec0;
+    border-left: 4px solid var(--darkyellow);
+    padding-left: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Reste du texte en Libertinus Sans */
+footer, .cta-text, .g-inp, .worrk-btn {
+    font-family: "Libertinus Sans", serif;
+}
+/* Titres avec Oswald */
+footer .app-name, 
+footer .footer-title {
+    font-family: 'Oswald', sans-serif;
+    color: #cbd5e0;
+    border-left: 3px solid var(--lightyellow);
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Espacement des liens de contact */
+.contact-detail {
+    margin-bottom: 0.8rem;
+    margin-top: 20px; /* Espace entre téléphone, mail, etc. */
+    
+}
+
+footer .contact-detail a, 
+footer .social-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+footer .contact-detail a:hover, 
+footer .social-links a:hover {
+    color: var(--lightyellow);
+    transform: translateX(5px); /* Petit effet de mouvement à droite */
+}
+
+/* Formulaire et Inputs */
+.g-i-t form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espace entre les champs du formulaire */
+}
+
+.g-inp {
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+}
+
+.g-inp:focus {
+    border-color: var(--lightyellow);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+/* Bouton Submit */
+.worrk-btn {
+    font-family: 'Oswald', sans-serif;
+    padding: 12px;
+    background: var(--lightyellow);
+    color: var(--darkblue);
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.worrk-btn:hover {
+    background: var(--white);
+    letter-spacing: 1px;
+}
+
+/* Footer Bottom */
+.cr-con {
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a0aec0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Liste Sociale sans puces */
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 1rem;
+}
+
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
+
+@media screen and (max-width: 768px) {
+
+  /* ---------- NAV ---------- */
+
+  nav {
+    height: auto;
+    padding: 15px 0;
+    position: relative;
+  }
+
+  .nav-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
+
+  .logo-text {
+    text-align: left;
+  }
+
+  /* Mobile menu hidden by default */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ede8fe;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: 0.4s ease;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+  
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .work-btn {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+
+  /* ---------- CARDS ---------- */
+
+  .presentations-container {
+    padding: 60px 0;
+  }
+
+  .presentation-card {
+    min-width: 85%;
+    max-width: 85%;
+    height: auto;
+  }
+
+  .presentation-description {
+    font-size: 0.85rem;
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+
+  /* ---------- FOOTER ---------- */
+
+  .f-item-con {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  footer .footer-title {
+    border-left: none;
+    padding-left: 0;
+    font-size: 1.3rem;
+  }
+
+  footer .contact-detail a,
+  footer .social-links a {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .g-inp,
+  .worrk-btn {
+    font-size: 0.9rem;
+  }
+
+  #myBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* ===== HAMBURGER STYLE ===== */
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.4s ease;
+}
+
+/* ===== ANIMATION TO X ===== */
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+

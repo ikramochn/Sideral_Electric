@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chariots d'Atelier | SIDERAL ELECTRIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* الأساسيات والنافبار (نفس النمط السابق لضمان التناسق) */
+        body { margin: 0; padding: 0; padding-top: 75px; font-family: 'Roboto', sans-serif; background-color: #f4f7f9; }
+        nav { position: fixed; top: 0; left: 0; width: 100%; height: 80px; background: rgba(16, 37, 69, 0.7); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.2); }
+        .nav-inner { width: 90%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; }
+        .brand-name { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; color: #FFC300; text-decoration: none; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links a { font-family: 'Oswald', sans-serif; color: #fff; margin-left: 25px; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: #FFC300; }
+
+        /* تنسيق المحتوى */
+        .simple-breadcrumb { padding: 20px 5%; font-size: 14px; color: #888; }
+        .simple-breadcrumb a { text-decoration: none; color: #003566; font-weight: bold; }
+        .section-title { text-align: center; color: #001D3D; font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 40px; }
+
+        .abris-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto 50px; padding: 0 20px; }
+        .abri-card { background: #fff; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 6px solid #001D3D; overflow: hidden; display: flex; flex-direction: column; }
+        .abri-header { padding: 20px; text-align: center; background: #fcfcfc; }
+        .abri-img-main { max-width: 100%; height: 220px; object-fit: contain; margin-top: 15px; }
+        .abri-body { padding: 20px; flex-grow: 1; }
+        
+        .mini-specs { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .mini-specs td { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.85rem; }
+        .mini-specs td:first-child { font-weight: bold; color: #003566; width: 50%; }
+
+        .btn-details { display: block; text-align: center; background: #001D3D; color: #fff !important; padding: 12px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; }
+        .btn-details:hover { background: #FFC300; color: #001D3D !important; }
+    </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo-text">
+      <a href="index.html" class="brand-name">SIDERAL ELECTRIC</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">ACCUEIL</a></li>
+      <li><a href="index.html#categories-slider">PRODUITS</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="simple-breadcrumb">
+    <a href="index.html">Accueil</a> / <span>Chariots d'Atelier</span>
+</div>
+
+<h1 class="section-title">Nos Chariots d'Atelier</h1>
+
+<div class="abris-grid">
+    
+    <div class="abri-card">
+        <div class="abri-header">
+            <h2>Chariot DECA "TURBO"</h2>
+            <div class="abri-image-container">
+                <img src="turbo.svg" alt="Chariot TURBO SIDERAL" class="abri-img-main">
+            </div>
+        </div>
+        <div class="abri-body">
+            <table class="mini-specs">
+                <tr><td>Dimensions (LxlxH)</td><td>70 x 36 x 81 cm </td></tr>
+                <tr><td>Capacité de charge</td><td>80 kg </td></tr>
+                <tr><td>Plateaux</td><td>3 larges plateaux en acier [cite: 56]</td></tr>
+                <tr><td>Roues</td><td>2 grandes (250mm) + 2 pivotantes avec freins [cite: 46, 58]</td></tr>
+                <tr><td>Supports</td><td>6 supports d'accrochage différents </td></tr>
+                <tr><td>Finition</td><td>Revêtement époxy (Jaune vif/Noir) </td></tr>
+            </table>
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px;">
+                Idéal pour organiser vos outils (perceuses, clés, tournevis) avec une mobilité extrême sur tous terrains[cite: 57, 58].
+            </p>
+            <a href="index.html#contact" class="btn-details">Demander Devis</a>
+        </div>
+    </div>
+
+    <div class="abri-card">
+        <div class="abri-header">
+            <h2>Chariot CHR-3T</h2>
+            <div class="abri-image-container">
+                <img src="chr3t.svg" alt="Chariot CHR-3T SIDERAL" class="abri-img-main">
+            </div>
+        </div>
+        <div class="abri-body">
+            <table class="mini-specs">
+                <tr><td>Dimensions (LxlxH)</td><td>81 x 41 x 82 cm </td></tr>
+                <tr><td>Capacité de charge</td><td>Jusqu'à 100 kg [cite: 71, 81]</td></tr>
+                <tr><td>Poids Net</td><td>25 KG </td></tr>
+                <tr><td>Roues</td><td>4 roues 70mm (2 pivotantes avec freins) [cite: 74, 83]</td></tr>
+                <tr><td>Surfaces</td><td>3 grandes surfaces avec rebord anti-chute [cite: 81]</td></tr>
+                <tr><td>Finition</td><td>Peinture bicolore résistante aux produits chimiques [cite: 74, 88]</td></tr>
+            </table>
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px;">
+                Parfait comme chariot de service ou transport pour outils et pièces de rechange en atelier ou garage[cite: 77, 81].
+            </p>
+            <a href="index.html#contact" class="btn-details">Demander Devis</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

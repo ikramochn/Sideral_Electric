@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bac de Rétention de Fûts | SIDERAL ELECTRIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Navbar Fix --- */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+             background: rgba(16, 37, 69, 0.7); /* Fond --black avec transparence */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a { display: flex; align-items: center; text-decoration: none; gap: 12px; }
+        .logo img { height: 55px; border-radius: 5px; }
+        .logo-text { display: flex; flex-direction: column; }
+        .brand-name { color: #FFC300; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.4rem; line-height: 1.2; }
+        .slogan { color: #FFC300; font-size: 0.7rem; letter-spacing: 1px; }
+
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { color: #001D3D; text-decoration: none;   font-family: 'Oswald', sans-serif; font-weight: 500; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: #FFC300; }
+
+
+
+
+        /* --- Page Layout --- */
+        body { padding-top: 80px; font-family: 'Roboto', sans-serif; margin: 0; background: #f4f4f4; }
+        
+        .breadcrumb { padding: 20px 5%; background: #fff; font-size: 14px; color: #666; border-bottom: 1px solid #eee; }
+        .breadcrumb a { color: #003566; text-decoration: none; font-weight: bold; }
+        
+        .sub-category-page { padding: 50px 5%; }
+        .section-title { color: #001D3D; font-size: 2.2rem; margin-bottom: 40px; text-align: center; font-family: 'Oswald', sans-serif; }
+
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        .spec-card { 
+            background: #fff; 
+            border-radius: 15px; 
+            padding: 25px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #001D3D;
+            transition: 0.3s;
+        }
+        .spec-card:hover { transform: translateY(-10px); }
+        .spec-card h2 { color: #001D3D; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 2px solid #FFC300; padding-bottom: 10px; }
+        .spec-card img { width: 100%; height: 200px; object-fit: contain; margin-bottom: 15px; }
+        
+        .specs-list { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .specs-list td { padding: 12px 0; border-bottom: 1px solid #eee; font-size: 0.95rem; color: #333; }
+        .specs-list td:first-child { font-weight: bold; color: #003566; width: 55%; }
+
+        .btn-quote { 
+            display: block; 
+            text-align: center; 
+            background: #001D3D; 
+            color: #fff; 
+            padding: 12px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-quote:hover { background: #FFC300; color: #001D3D; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* يفضل إضافة جافاسكريبت للهامبرغر لاحقاً */
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    
+    <div class="logo-text">
+      <span class="brand-name">SIDERAL ELECTRIC</span>
+      <span class="brand-slogan">LES EXPERTS DU SOUDAGE</span>
+    </div>
+
+    <!-- زر الهامبرغر -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#home">ACCUEIL</a></li>
+      <li><a href="index.html#categories-slider">PRODUITS</a></li>
+      <li><a href="index.html#clients-gallery">REALISATIONS</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+
+  </div>
+</nav>
+<style>
+
+
+
+/*********************************BR PAGE****************************************/
+/* تنسيق صفحة الفئة */
+.category-display {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+      padding-top: 20px; /* لإفساح المجال للنافبار */
+
+}
+
+.category-description {
+  padding-top: 0px; 
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* شبكة المنتجات */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;       /* زدنا الارتفاع من 250px إلى 320px ليعطي مساحة أكبر للصورة */
+    background: #f9f9f9;
+    padding: 0px;       /* قللنا الهوامش من 20px إلى 10px لإعطاء مساحة أكبر للمنتج */
+    display: flex;       /* لضمان توسط الصورة تماماً */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 120%;        /* تجعل الصورة تأخذ العرض الكامل المتاح */
+    height: 120%;       /* تجعل الصورة تأخذ الارتفاع الكامل المتاح */
+    object-fit: contain; /* تضمن ظهور المنتج كاملاً بدون قص مع تكبيره لأقصى حد ممكن */
+    transition: transform 0.5s ease; /* لإضافة حركة زووم عند التمرير */
+}
+
+/* حركة إضافية: زووم خفيف على الصورة عند تمرير الماوس على البطاقة */
+.product-card:hover .product-img img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    padding: 25px;
+    text-align: left;
+}
+
+.product-info h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--darkblue);
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* زر التفاصيل */
+.btn-details {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--darkblue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid var(--darkblue);
+}
+
+.btn-details:hover {
+    background: transparent;
+    color: var(--darkblue);
+}
+
+</style>
+
+    <section class="category-display">
+        <h1 class="section-title">Nos Solutions de Rétention</h1>
+        <p class="category-description">Découvrez notre gamme complète de bacs de rétention pour le stockage sécurisé de vos produits chimiques et hydrocarbures.</p>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="br1.svg" alt="Bac de rétention pour futs">
+                </div>
+                <div class="product-info">
+                    <h3>Bac de rétention pour futs</h3>
+                    <p>Disponible pour 1, 2, 4, 6 et 8 futs. Conforme aux normes de sécurité.</p>
+                    <a href="index.html#prod1" class="btn-details">Détails</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="br2.svg" alt="Bac de rétention laboratoire">
+                </div>
+                <div class="product-info">
+                    <h3>Bac de rétention Laboratoire</h3>
+                    <p>Idéal pour le stockage de petits flacons et produits de laboratoire.</p>
+                    <a href="index.html#prod2" class="btn-details">Détails</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

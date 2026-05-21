@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratoire | SIDERAL ELECTRIC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           1. الأساسيات وتنسيق الجسم (Body)
+           ========================================= */
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 75px; 
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f9;
+        }
+
+        /* =========================================
+           2. تنسيق شريط التنقل (Navbar) 
+           ========================================= */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(16, 37, 69, 0.7); 
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            border-bottom: 1px solid rgba(255, 214, 10, 0.1);
+        }
+
+        .nav-inner {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text { display: flex; flex-direction: column; text-decoration: none; }
+        .brand-name { font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 700; color: #FFC300; line-height: 1; letter-spacing: 1px; }
+        .brand-slogan { font-family: 'Roboto', sans-serif; font-size: 0.75rem; font-weight: 400; color: #eee; letter-spacing: 1.5px; margin-top: 5px; text-transform: uppercase; }
+
+        .nav-links { display: flex; list-style: none; align-items: center; }
+        .nav-links a { font-family: 'Oswald', sans-serif; font-size: 1.2rem; color: #fff; margin-left: 25px; text-decoration: none; transition: transform 0.3s ease, color 0.3s ease; letter-spacing: 1px; }
+        .nav-links a:hover { color: #FFC300; transform: translateY(-3px); }
+
+        /* =========================================
+           3. المسار البسيط (Breadcrumb)
+           ========================================= */
+        .simple-breadcrumb { padding: 20px 5%; font-size: 14px; font-family: 'Roboto', sans-serif; color: #888; }
+        .simple-breadcrumb a { text-decoration: none; color: #003566; margin-right: 5px; font-weight: bold; }
+        .simple-breadcrumb span { margin-left: 5px; color: #333; font-weight: bold; }
+
+        /* =========================================
+           4. هيكل الكروت (Grid & Cards)
+           ========================================= */
+        .section-title {
+            text-align: center;
+            color: #001D3D;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .abris-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .abri-card {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid #001D3D;
+            transition: transform 0.3s ease;
+        }
+
+        .abri-card:hover { transform: translateY(-5px); }
+
+        .abri-header { background: #fcfcfc; padding: 20px; text-align: center; border-bottom: 1px solid #eee; }
+        
+        .abri-image-container { margin-top: 15px; width: 100%; text-align: center; }
+        .abri-img-main { max-width: 100%; height: 180px; object-fit: contain; border-radius: 8px; }
+
+        /* =========================================
+           5. الجداول التقنية والأزرار
+           ========================================= */
+        .mini-specs { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .mini-specs td { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+        .mini-specs td:first-child { font-weight: bold; color: #003566; width: 55%; }
+
+        .btn-details {
+            display: block;
+            text-align: center;
+            background: #001D3D;
+            color: #ffffff !important;
+            padding: 14px;
+            text-decoration: none !important;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .btn-details:hover { background: #FFC300; color: #001D3D !important; }
+
+        .empty-card { border-top-color: #ccc; opacity: 0.7; }
+        .empty-content { text-align: center; padding: 40px 20px; color: #999; border: 2px dashed #ddd; border-radius: 10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo-text">
+      <span class="brand-name">SIDERAL ELECTRIC</span>
+      <span class="brand-slogan">LES EXPERTS DU SOUDAGE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">ACCUEIL</a></li>
+      <li><a href="index.html#categories-slider">PRODUITS</a></li>
+      <li><a href="index.html#clients-gallery">REALISATIONS</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="simple-breadcrumb">
+    <a href="index.html">Accueil</a> / <span>Laboratoire</span>
+</div>
+
+<h1 class="section-title">Solutions de Laboratoire</h1>
+
+<div class="abris-grid">
+    
+    <div class="abri-card">
+        <div class="abri-header">
+            <h2>Bac de Rétention (BR-BDN 60X40)</h2>
+            <div class="abri-image-container">
+                <img src="brl.svg" alt="Bac de Rétention Laboratoire" class="abri-img-main">
+            </div>
+        </div>
+        <div class="abri-body">
+            <table class="mini-specs">
+                <tr><td>Dimensions (LxlxH)</td><td>60 x 40 x 22 cm </td></tr>
+                <tr><td>Capacité de Rétention</td><td>40 Litres </td></tr>
+                <tr><td>Charge Maximale</td><td>100 kg </td></tr>
+                <tr><td>Poids du bac</td><td>15 Kg </td></tr>
+                <tr><td>Protection</td><td>Revêtement époxy </td></tr>
+            </table>
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 20px;">
+                Conçu pour le stockage en rétention de petites cuves et jerrycans de 40 litres. 
+            </p>
+            <a href="index.html#contact" class="btn-details">Demander Devis</a>
+        </div>
+    </div>
+
+    <div class="abri-card empty-card">
+        <div class="abri-header">
+            <h2>Autres Équipements</h2>
+        </div>
+        <div class="abri-body">
+            <div class="empty-content">
+                <i class="fas fa-flask" style="font-size: 3rem; margin-bottom: 15px; color: #ccc;"></i>
+                <p>Les informations techniques pour d'autres modèles seront ajoutées prochainement.</p>
+            </div>
+            <button class="btn-details" style="background: #ccc; cursor: not-allowed;" disabled>En attente</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
